@@ -1,9 +1,9 @@
 package com.company;
 
 import java.util.*;
-class solution
+public class solution
 {
-    public static void find_max_product(int[] nums)
+    public static int find_max_product(int[] nums)
     {
         int max_pair_product = Integer.MIN_VALUE;
         int max_i = -1, max_j = -1;
@@ -21,15 +21,24 @@ class solution
             }
         }
 
-        System.out.print("Pair is (" + nums[max_i] + ", " + nums[max_j] + "), Maximum Product: " + (nums[max_i]*nums[max_j]));
-        Arrays.toString(nums);
-        return;
-   }
+        int ar1=nums[max_i];
+        int ar2=nums[max_j];
+
+       String numSt1= Integer.toString(ar1);
+
+       String numSt2=Integer.toString(ar2);
+
+    String arrProd=Integer.toString(max_pair_product);
+        String numSt=numSt1+","+numSt2;
+        System.out.println("Pair is "+arrProd);
+return max_pair_product;
+    }
 
     public static void main (String[] args)
     {
-        int[] nums = { 2, 3, 5, 7, 9, 5, 8, -5 };
-        System.out.println("\nOriginal array: "+Arrays.toString(nums));
+        int[] nums =new int[] { 2, 3, 5, 9, -7, 5, 8, -5 };
+        String numStr = Arrays.toString(nums);
+       System.out.println("\nOriginal array: "+numStr);
         find_max_product(nums);
     }
 }
